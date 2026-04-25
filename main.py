@@ -38,7 +38,7 @@ def speak(text):
             sys.stdout.write(RESET_CURSOR)
             # print the frame and current letter
             sys.stdout.write(f"Speaking: '{char}'\n")
-            sys.stdout.write(VISEMES[viseme])
+            sys.stdout.write("\033[32m" + VISEMES[viseme] + "\033[0m")  # Green color for viseme
             # force terminal to update
             sys.stdout.flush()
             # space between phonemes
